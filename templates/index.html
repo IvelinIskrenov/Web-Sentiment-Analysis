@@ -1,34 +1,22 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="bg">
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" crossorigin="anonymous">
-    <script src="/static/mywebscript.js"></script>
-    <style>
-        .center-heading { text-align: center; }
-        body { padding: 20px; }
-    </style>
-    <title>NLP - Sentiment Analysis using BERT</title>
+    <meta charset="utf-8">
+    <title>Sentiment Analysis</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
-    <div class="card">
-        <div class="card-body">
-            <h1 class="center-heading">NLP - Sentiment Analysis using BERT</h1>
-            <div style="padding: 25px;">
-                <label class="form-label">Please enter the text to be analyzed</label>
-                <textarea class="form-control" id="textToAnalyze" rows="4"></textarea>
+    <div class="container mt-5">
+        <h1>Analysis of the text</h1>
+
+        <form method="POST" action="{{ url_for('render_index_page') }}">
+            <div class="mb-3">
+                <label class="form-label">Enter text to analysis</label>
+                <textarea name="text" class="form-control" rows="3" required
+                          placeholder="Enter your text here">{% if result %}{{ result.text }}{% endif %}</textarea>
             </div>
-
-
-            <div style="padding: 25px;">
-                <button onclick="RunSentimentAnalysis()" class="btn btn-secondary">Run Sentiment Analysis</button>
-            </div>
-
-
-            <h2 class="mb-3">Result of Sentiment Analysis</h2>
-            <div id="system_response" style="padding: 25px;"></div>
-        </div>
+            <button type="submit" class="btn btn-secondary">Analysis now!</button>
+        </form>
     </div>
 </body>
 </html>
