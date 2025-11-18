@@ -1,0 +1,34 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" crossorigin="anonymous">
+    <script src="/static/mywebscript.js"></script>
+    <style>
+        .center-heading { text-align: center; }
+        body { padding: 20px; }
+    </style>
+    <title>NLP - Sentiment Analysis using BERT</title>
+</head>
+<body>
+    <div class="card">
+        <div class="card-body">
+            <h1 class="center-heading">NLP - Sentiment Analysis using BERT</h1>
+            <div style="padding: 25px;">
+                <label class="form-label">Please enter the text to be analyzed</label>
+                <textarea class="form-control" id="textToAnalyze" rows="4"></textarea>
+            </div>
+
+
+            <div style="padding: 25px;">
+                <button onclick="RunSentimentAnalysis()" class="btn btn-secondary">Run Sentiment Analysis</button>
+            </div>
+
+
+            <h2 class="mb-3">Result of Sentiment Analysis</h2>
+            <div id="system_response" style="padding: 25px;"></div>
+        </div>
+    </div>
+</body>
+</html>
