@@ -18,9 +18,9 @@ def render_index_page():
             "score": score
         }
 
-    return jsonify(result)
-    #return render_template("index.html", result=result)
+        return jsonify(result)
+
+    return render_template("index.html", result=result)
 
 if __name__ == "__main__":
-    # debug=True helps see request logs; remove in production
-    app.run(host="0.0.0.0", port=5000, debug=True)
+    app.run(debug=True)

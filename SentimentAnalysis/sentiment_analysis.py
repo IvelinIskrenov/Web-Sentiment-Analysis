@@ -19,12 +19,10 @@ def sentiment_analyzer(text: str):
     else:
         return "neutral", compound
 
-#if __name__ == "__main__":
-#    samples = [
-#        "I love this product, it's fantastic!",
-#        "It's okay, not great but not terrible.",
-#        "I hate this. Worst experience ever."
-#    ]
-#    for t in samples:
-#        label, score = sentiment_analyzer(t)
-#        print(f"Text: {t}\n -> {label} (score={score})\n")
+if __name__ == "__main__":
+    samples = [
+        "I hate you"
+    ]
+    for t in samples:
+        label, score = sentiment_analyzer(t)
+        print(f"Text: {t}\n -> {label} (score={score})\n")
